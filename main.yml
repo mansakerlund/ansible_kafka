@@ -1,0 +1,22 @@
+---
+
+#- hosts: all
+#  become: true
+#  roles:
+#    - firewall
+#    - java
+#    - software
+
+
+
+#- hosts: zookeeper_servers 
+#  become: true
+#  roles:
+#    - zookeeper
+
+- hosts: kafka_brokers
+  become: true
+  roles:
+    - kafka
+    - firewall
+    - os
